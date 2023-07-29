@@ -44,7 +44,7 @@ export const deleteTodoAsync = createAsyncThunk(
 export const editTodoAsync = createAsyncThunk(
   "todos/editTodoAsync",
   async (payload) => {
-    const response = await fetch(`http://localhost:3000/v1/todolist/${payload.id}`, {
+    const response = await fetch(`${todoListUrl}/v1/todolist/${payload.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
